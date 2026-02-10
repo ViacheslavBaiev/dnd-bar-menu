@@ -19,11 +19,20 @@
   </div>
 </header>
 
+<nav class="menu-tabs">
+  <button class="tab active" data-target="wine">🥂 Вино</button>
+  <button class="tab" data-target="light">🍊 Лёгкие</button>
+  <button class="tab" data-target="classic">🍸 Классика</button>
+  <button class="tab" data-target="cocktails">🍹 Коктейли</button>
+  <button class="tab" data-target="soft">🧃 Безалк.</button>
+  <button class="tab" data-target="snacks">🍿 Закуски</button>
+</nav>
+
 <main class="container">
 
   <!-- WINE -->
 
-  <section class="menu-section">
+  <section class="menu-section" data-section="wine">
     <h2>🥂 Игристое и вино</h2>
 
     <div class="menu-grid">
@@ -67,7 +76,7 @@
 
   <!-- LIGHT COCKTAILS -->
 
-  <section class="menu-section">
+  <section class="menu-section" data-section="light">
     <h2>🍊 Лёгкие коктейли</h2>
 
     <div class="menu-grid">
@@ -155,7 +164,7 @@
 
   <!-- CLASSIC -->
 
-  <section class="menu-section">
+  <section class="menu-section" data-section="classic">
     <h2>🍸 Классические лонги</h2>
 
     <div class="menu-grid">
@@ -243,7 +252,7 @@
 
   <!-- COCTAILS -->
 
-  <section class="menu-section">
+  <section class="menu-section" data-section="cocktails">
     <h2>🍹 Коктейли</h2>
 
     <div class="menu-grid">
@@ -287,7 +296,7 @@
 
   <!-- DRAFT DRINKS -->
 
-  <section class="menu-section">
+  <section class="menu-section" data-section="soft">
     <h2>🧃 Безалкогольные напитки</h2>
 
     <div class="menu-grid">
@@ -353,7 +362,7 @@
 
   <!-- SNACKS -->
 
-  <section class="menu-section">
+  <section class="menu-section" data-section="snacks">
     <h2>🍿 Закуски</h2>
 
     <div class="menu-grid">
@@ -428,6 +437,25 @@
   </section>
 
 </main>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const sections = document.querySelectorAll('.menu-section');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.target;
+
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      sections.forEach(section => {
+        section.style.display =
+          section.dataset.section === target ? 'block' : 'none';
+      });
+    });
+  });
+</script>
 
 </body>
 </html>
