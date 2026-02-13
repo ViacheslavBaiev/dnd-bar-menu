@@ -84,10 +84,6 @@ body{
   display:none;
 }
 
-.menu-section[data-section="wine"]{
-  display:block;
-}
-
 .menu-section h2{
   margin-bottom:16px;
   color:var(--accent);
@@ -141,6 +137,86 @@ body{
   font-size:0.85rem;
   color:var(--muted);
 }
+
+.lang-switcher{
+  position:absolute;
+  top:15px;
+  right:15px;
+  width:60px;
+  height:60px;
+}
+
+.lang-main{
+  position:absolute;
+  z-index:2;
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  border:none;
+  font-size:24px;
+  cursor:pointer;
+  background:rgba(0,0,0,.6);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.lang-main img{
+  width:40;
+  height:40px;
+  object-fit:contain;
+}
+
+.lang-options{
+  position:absolute;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+}
+
+.lang-options.open{
+  pointer-events:auto;
+}
+
+.lang-btn{
+  position:absolute;
+  width:24px;
+  height:24px;
+  border-radius:50%;
+  border:none;
+  font-size:20px;
+  cursor:pointer;
+  background:rgba(0,0,0,.7);
+  transform:translate(0,0) scale(0);
+  transition:.35s cubic-bezier(.4,2,.6,1);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.lang-btn img{
+  width:24px;
+  height:24px;
+  object-fit:contain;
+}
+
+
+/* позиции раскрытия */
+.lang-options.open .lang-btn:nth-child(1){
+  transform:translate(-60px, 0) scale(1);
+}
+.lang-options.open .lang-btn:nth-child(2){
+  transform:translate(-50px, 50px) scale(1);
+}
+.lang-options.open .lang-btn:nth-child(3){
+  transform:translate(0, 70px) scale(1);
+}
+.lang-options.open .lang-btn:nth-child(4){
+  transform:translate(50px, 50px) scale(1);
+}
+
+
 
 @media (min-width:600px){
   .menu-grid{

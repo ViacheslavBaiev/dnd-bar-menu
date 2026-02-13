@@ -17,16 +17,40 @@
     <h1>🐲 D&D Tavern 🏰</h1>
     <p>Mini bar menu</p>
   </div>
+
+  <div class="lang-switcher">
+    <button class="lang-main" id="langToggle">
+      <img src="images/flags/ru.svg">
+    </button>
+    <div class="lang-options" id="langOptions">
+      <button class="lang-btn" data-lang="ru">
+        <img src="images/flags/ru.svg">
+      </button>
+
+      <button class="lang-btn" data-lang="en">
+        <img src="images/flags/en.svg">
+      </button>
+
+      <button class="lang-btn" data-lang="ka">
+        <img src="images/flags/ge.svg">
+      </button>
+
+      <button class="lang-btn" data-lang="ua">
+        <img src="images/flags/ua.svg">
+      </button>
+    </div>
+  </div>
+
 </header>
 
 <nav class="menu-tabs">
   <div class="menu-tabs-inner">
-    <button class="tab active" data-target="wine">🥂 Игристое и вино</button>
-    <button class="tab" data-target="light">🍊 Лёгкие коктейли</button>
-    <button class="tab" data-target="classic">🍸 Классические лонги</button>
-    <button class="tab" data-target="cocktails">🍹 Коктейли</button>
-    <button class="tab" data-target="soft">🧃 Напитки</button>
-    <button class="tab" data-target="snacks">🍿 Закуски</button>
+    <button class="tab active" data-target="wine" data-i18n="tab_wine">🥂 Игристое и вино</button>
+    <button class="tab" data-target="light" data-i18n="tab_light">🍊 Лёгкие коктейли</button>
+    <button class="tab" data-target="classic" data-i18n="tab_classic">🍸 Классические лонги</button>
+    <button class="tab" data-target="cocktails" data-i18n="tab_cocktails">🍹 Коктейли</button>
+    <button class="tab" data-target="soft" data-i18n="tab_soft">🧃 Напитки</button>
+    <button class="tab" data-target="snacks" data-i18n="tab_snacks">🍿 Закуски</button>
   </div>
 </nav>
 
@@ -34,8 +58,8 @@
 
   <!-- WINE -->
 
-  <section class="menu-section" data-section="wine">
-    <h2>🥂 Игристое и вино</h2>
+  <section class="menu-section" data-category="wine">
+    <h2 data-i18n="h2_wine">🥂 Игристое и вино</h2>
 
     <div class="menu-grid">
 
@@ -45,8 +69,8 @@
           <div class="price">₾ 10.00</div>
         </div>
         <div class="card-info">
-          <div class="title">Вино игристое Prosecco/Cava</div>
-          <div class="desc">150 мл</div>
+          <div class="title" data-i18n="titlle_wine_prosseco">Вино игристое Prosecco/Cava</div>
+          <div class="desc" data-i18n="desc_150ml">150 мл</div>
         </div>
       </div>
 
@@ -56,8 +80,8 @@
           <div class="price">₾ 9.00</div>
         </div>
         <div class="card-info">
-          <div class="title">Белое вино</div>
-          <div class="desc">150 мл</div>
+          <div class="title" data-i18n="titlle_white_wine">Белое вино</div>
+          <div class="desc" data-i18n="desc_150ml">150 мл</div>
         </div>
       </div>
 
@@ -67,8 +91,8 @@
           <div class="price">₾ 9.00</div>
         </div>
         <div class="card-info">
-          <div class="title">Красное вино</div>
-          <div class="desc">150 мл</div>
+          <div class="title" data-i18n="titlle_red_wine">Красное вино</div>
+          <div class="desc" data-i18n="desc_150ml">150 мл</div>
         </div>
       </div>
 
@@ -78,8 +102,8 @@
 
   <!-- LIGHT COCKTAILS -->
 
-  <section class="menu-section" data-section="light">
-    <h2>🍊 Лёгкие коктейли</h2>
+  <section class="menu-section" data-category="light">
+    <h2 data-i18n="h2_light_coctails">🍊 Лёгкие коктейли</h2>
 
     <div class="menu-grid">
 
@@ -89,8 +113,8 @@
           <div class="price">₾ 20.00</div>
         </div>
         <div class="card-info">
-          <div class="title">Aperol Spritz</div>
-          <div class="desc">Aperol, игристое, содовая, апельсин</div>
+          <div class="title" data-i18n="titlle_aperol_spritz">Aperol Spritz</div>
+          <div class="desc" data-i18n="desc_aperol_spritz">Aperol, игристое, содовая, апельсин</div>
         </div>
       </div>
 
@@ -100,8 +124,8 @@
           <div class="price">₾ 20.00</div>
         </div>
         <div class="card-info">
-          <div class="title">Limoncello Spritz</div>
-          <div class="desc">Limoncello, игристое, содовая, лимон</div>
+          <div class="title" data-i18n="titlle_limoncello_spritz">Limoncello Spritz</div>
+          <div class="desc" data-i18n="desc_limoncello_spritz">Limoncello, игристое, содовая, лимон</div>
         </div>
       </div>
 
@@ -111,8 +135,8 @@
           <div class="price">₾ 20.00</div>
         </div>
         <div class="card-info">
-          <div class="title">Hugo Spritz</div>
-          <div class="desc">Игристое, сироп(персик/клубника/гранат), содовая, лайм, мята</div>
+          <div class="title" data-i18n="titlle_hugo_spritz">Hugo Spritz</div>
+          <div class="desc" data-i18n="desc_hugo_spritz">Игристое, сироп(персик/клубника/гранат), содовая, лайм, мята</div>
         </div>
       </div>
 
@@ -122,8 +146,8 @@
           <div class="price">₾ 20.00</div>
         </div>
         <div class="card-info">
-          <div class="title">Strawberry Spritz</div>
-          <div class="desc">Клубничный ликёр, игристое, содовая</div>
+          <div class="title" data-i18n="titlle_strawberry_spritz">Strawberry Spritz</div>
+          <div class="desc" data-i18n="desc_strawberry_spritz">Клубничный ликёр, игристое, содовая</div>
         </div>
       </div>
 
@@ -133,8 +157,8 @@
           <div class="price">₾ 18.00</div>
         </div>
         <div class="card-info">
-          <div class="title">Mimosa</div>
-          <div class="desc">Игристое, апельсиновый сок</div>
+          <div class="title" data-i18n="titlle_mimosa">Mimosa</div>
+          <div class="desc" data-i18n="desc_mimosa">Игристое, апельсиновый сок</div>
         </div>
       </div>
 
@@ -144,8 +168,8 @@
           <div class="price">₾ 18.00</div>
         </div>
         <div class="card-info">
-          <div class="title">Bellini</div>
-          <div class="desc">Игристое, персиковый сок</div>
+          <div class="title" data-i18n="titlle_bellini">Bellini</div>
+          <div class="desc" data-i18n="desc_bellini">Игристое, персиковый сок</div>
         </div>
       </div>
 
@@ -155,8 +179,8 @@
           <div class="price">₾ 18.00</div>
         </div>
         <div class="card-info">
-          <div class="title">Campari Orange</div>
-          <div class="desc">Campari, апельсиновый сок</div>
+          <div class="title" data-i18n="titlle_campari_orange">Campari Orange</div>
+          <div class="desc" data-i18n="desc_campari_orange">Campari, апельсиновый сок</div>
         </div>
       </div>
 
@@ -166,8 +190,8 @@
 
   <!-- CLASSIC -->
 
-  <section class="menu-section" data-section="classic">
-    <h2>🍸 Классические лонги</h2>
+  <section class="menu-section" data-category="classic">
+    <h2 data-i18n="h2_classic_long">🍸 Классические лонги</h2>
 
     <div class="menu-grid">
 
@@ -177,8 +201,8 @@
           <div class="price">₾ 14.00</div>
         </div>
         <div class="card-info">
-          <div class="title">Gin & Tonic</div>
-          <div class="desc">Джин, тоник, лайм</div>
+          <div class="title" data-i18n="titlle_gin_tonic">Gin & Tonic</div>
+          <div class="desc" data-i18n="desc_gin_tonic">Джин, тоник, лайм</div>
         </div>
       </div>
 
@@ -188,8 +212,8 @@
           <div class="price">₾ 14.00</div>
         </div>
         <div class="card-info">
-          <div class="title">Vodka Tonic</div>
-          <div class="desc">Водка, тоник, лайм</div>
+          <div class="title" data-i18n="titlle_vodka_tonic">Vodka Tonic</div>
+          <div class="desc" data-i18n="desc_vodka_tonic">Водка, тоник, лайм</div>
         </div>
       </div>
 
@@ -199,8 +223,8 @@
           <div class="price">₾ 15.00</div>
         </div>
         <div class="card-info">
-          <div class="title">Rum & Cola (Cuba Libre)</div>
-          <div class="desc">Белый ром, coca-cola, лайм</div>
+          <div class="title" data-i18n="titlle_cuba_libre">Rum & Cola (Cuba Libre)</div>
+          <div class="desc" data-i18n="desc_cuba_libre">Белый ром, coca-cola, лайм</div>
         </div>
       </div>
 
@@ -210,8 +234,8 @@
           <div class="price">₾ 15.00</div>
         </div>
         <div class="card-info">
-          <div class="title">Whisky & Cola</div>
-          <div class="desc">Виски, coca-cola, лимон</div>
+          <div class="title" data-i18n="titlle_whisky_cola">Whisky & Cola</div>
+          <div class="desc" data-i18n="desc_whisky_cola">Виски, coca-cola, лимон</div>
         </div>
       </div>
 
@@ -221,8 +245,8 @@
           <div class="price">₾ 14.00</div>
         </div>
         <div class="card-info">
-          <div class="title">Screwdriver (Отвёртка)</div>
-          <div class="desc">Водка, апельсиновый сок</div>
+          <div class="title" data-i18n="titlle_screwdriver">Screwdriver (Отвёртка)</div>
+          <div class="desc" data-i18n="desc_screwdriver">Водка, апельсиновый сок</div>
         </div>
       </div>
 
@@ -232,8 +256,8 @@
           <div class="price">₾ 14.00</div>
         </div>
         <div class="card-info">
-          <div class="title">Gin & Juice</div>
-          <div class="desc">Джин, апельсиновый/грейпфрутовый сок</div>
+          <div class="title" data-i18n="titlle_gin_juice">Gin & Juice</div>
+          <div class="desc" data-i18n="desc_gin_juice">Джин, апельсиновый/грейпфрутовый сок</div>
         </div>
       </div>
 
@@ -243,8 +267,8 @@
           <div class="price">₾ 15.00</div>
         </div>
         <div class="card-info">
-          <div class="title">Campari Tonic</div>
-          <div class="desc">Campari, тоник</div>
+          <div class="title" data-i18n="titlle_campari_tonic">Campari Tonic</div>
+          <div class="desc" data-i18n="desc_campari_tonic">Campari, тоник</div>
         </div>
       </div>
 
@@ -254,8 +278,8 @@
 
   <!-- COCTAILS -->
 
-  <section class="menu-section" data-section="cocktails">
-    <h2>🍹 Коктейли</h2>
+  <section class="menu-section" data-category="cocktails">
+    <h2 data-i18n="h2_coctails">🍹 Коктейли</h2>
 
     <div class="menu-grid">
 
@@ -265,8 +289,8 @@
           <div class="price">₾ 20.00</div>
         </div>
         <div class="card-info">
-          <div class="title">Mojito</div>
-          <div class="desc">Белый ром, лаймовый сок, сироп, содовая, мята</div>
+          <div class="title" data-i18n="titlle_mojito">Mojito</div>
+          <div class="desc" data-i18n="desc_mojito">Белый ром, лаймовый сок, сироп, содовая, мята</div>
         </div>
       </div>
 
@@ -276,8 +300,8 @@
           <div class="price">₾ 14.00</div>
         </div>
         <div class="card-info">
-          <div class="title">Mojito безалкогольный</div>
-          <div class="desc">лаймовый сок, сироп, содовая, мята</div>
+          <div class="title" data-i18n="titlle_mojito_non_alc">Mojito безалкогольный</div>
+          <div class="desc" data-i18n="desc_mojito_non_alc">лаймовый сок, сироп, содовая, мята</div>
         </div>
       </div>
 
@@ -287,8 +311,8 @@
           <div class="price">₾ 28.00</div>
         </div>
         <div class="card-info">
-          <div class="title">Long Island</div>
-          <div class="desc">Водка, ром, джин, кола, лимон</div>
+          <div class="title" data-i18n="titlle_long_island">Long Island</div>
+          <div class="desc" data-i18n="desc_long_island">Водка, ром, джин, кола, лимон</div>
         </div>
       </div>
 
@@ -298,8 +322,8 @@
 
   <!-- DRAFT DRINKS -->
 
-  <section class="menu-section" data-section="soft">
-    <h2>🧃 Безалкогольные напитки</h2>
+  <section class="menu-section" data-category="soft">
+    <h2 data-i18n="h2_soft_drink">🧃 Безалкогольные напитки</h2>
 
     <div class="menu-grid">
 
@@ -309,8 +333,8 @@
           <div class="price">₾ 5.00</div>
         </div>
         <div class="card-info">
-          <div class="title">Сок</div>
-          <div class="desc">Апельсиновый, яблочный, мультифрукт</div>
+          <div class="title" data-i18n="titlle_juice">Сок</div>
+          <div class="desc" data-i18n="desc_juice">Апельсиновый, яблочный, мультифрукт</div>
         </div>
       </div>
 
@@ -320,7 +344,7 @@
           <div class="price">₾ 5.00</div>
         </div>
         <div class="card-info">
-          <div class="title">Лимонад</div>
+          <div class="title" data-i18n="titlle_lemonad">Лимонад</div>
           <div class="desc"></div>
         </div>
       </div>
@@ -331,8 +355,8 @@
           <div class="price">₾ 3.00</div>
         </div>
         <div class="card-info">
-          <div class="title">Вода</div>
-          <div class="desc">Газированная/негазированная</div>
+          <div class="title" data-i18n="titlle_water">Вода</div>
+          <div class="desc" data-i18n="desc_water">Газированная/негазированная</div>
         </div>
       </div>
 
@@ -342,8 +366,8 @@
           <div class="price">₾ 4.00</div>
         </div>
         <div class="card-info">
-          <div class="title">Чай</div>
-          <div class="desc">Зеленый, черный, ромашковый</div>
+          <div class="title" data-i18n="titlle_tea">Чай</div>
+          <div class="desc" data-i18n="desc_tea">Зеленый, черный, ромашковый</div>
         </div>
       </div>
 
@@ -353,7 +377,7 @@
           <div class="price">₾ 6.00</div>
         </div>
         <div class="card-info">
-          <div class="title">Кофе</div>
+          <div class="title" data-i18n="titlle_coffe">Кофе</div>
           <div class="desc"></div>
         </div>
       </div>
@@ -364,8 +388,8 @@
 
   <!-- SNACKS -->
 
-  <section class="menu-section" data-section="snacks">
-    <h2>🍿 Закуски</h2>
+  <section class="menu-section" data-category="snacks">
+    <h2 data-i18n="h2_snaks">🍿 Закуски</h2>
 
     <div class="menu-grid">
 
@@ -375,7 +399,7 @@
           <div class="price">₾ 8.00</div>
         </div>
         <div class="card-info">
-          <div class="title">Начос & соус</div>
+          <div class="title" data-i18n="titlle_nachos">Начос & соус</div>
           <div class="desc"></div>
         </div>
       </div>
@@ -386,8 +410,8 @@
           <div class="price">₾ 6.00</div>
         </div>
         <div class="card-info">
-          <div class="title">Орешки</div>
-          <div class="desc">Солёные/несолёные</div>
+          <div class="title" data-i18n="titlle_nuts">Орешки</div>
+          <div class="desc" data-i18n="desc_">Солёные/несолёные</div>
         </div>
       </div>
 
@@ -397,8 +421,8 @@
           <div class="price">₾ 6.00</div>
         </div>
         <div class="card-info">
-          <div class="title">Чипсы</div>
-          <div class="desc">Сыр, бекон, зелень</div>
+          <div class="title" data-i18n="titlle_chips">Чипсы</div>
+          <div class="desc" data-i18n="desc_">Сыр, бекон, зелень</div>
         </div>
       </div>
 
@@ -408,8 +432,8 @@
           <div class="price">₾ 5.00</div>
         </div>
         <div class="card-info">
-          <div class="title">Попкорн</div>
-          <div class="desc">Карамельный, фруктовый, сырный, соленый</div>
+          <div class="title" data-i18n="titlle_popcorn">Попкорн</div>
+          <div class="desc" data-i18n="desc_">Карамельный, фруктовый, сырный, соленый</div>
         </div>
       </div>
 
@@ -419,7 +443,7 @@
           <div class="price">₾ 9.00</div>
         </div>
         <div class="card-info">
-          <div class="title">Вяленое мясо</div>
+          <div class="title" data-i18n="titlle_djerki">Вяленое мясо</div>
           <div class="desc"></div>
         </div>
       </div>
@@ -430,7 +454,7 @@
           <div class="price">₾ 5.00</div>
         </div>
         <div class="card-info">
-          <div class="title">Шоколадки, батончики</div>
+          <div class="title" data-i18n="titlle_chocolate">Шоколадки, батончики</div>
           <div class="desc"></div>
         </div>
       </div>
@@ -440,24 +464,7 @@
 
 </main>
 
-<script>
-  const tabs = document.querySelectorAll('.tab');
-  const sections = document.querySelectorAll('.menu-section');
-
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      const target = tab.dataset.target;
-
-      tabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-
-      sections.forEach(section => {
-        section.style.display =
-          section.dataset.section === target ? 'block' : 'none';
-      });
-    });
-  });
-</script>
+<script src="app.js"></script>
 
 </body>
 </html>
