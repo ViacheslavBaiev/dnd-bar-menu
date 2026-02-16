@@ -104,7 +104,9 @@ body{
 }
 
 .image-wrap{
-  width:110px;
+  width:120px;
+  height:140px;
+  flex-shrink:0;
   position:relative;
 }
 
